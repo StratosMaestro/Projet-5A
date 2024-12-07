@@ -5,7 +5,7 @@ from typing import List, Set
 
 def afficher_pendu(erreurs: int) -> None:
     """
-    Affiche l'état du pendu en fonction du nombre d'erreurs...
+    Affiche l'état du pendu en fonction du nombre d'erreurs.
 
     Args:
         erreurs (int): Nombre d'erreurs commises.

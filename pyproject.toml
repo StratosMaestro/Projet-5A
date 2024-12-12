@@ -3,8 +3,8 @@ requires-python = ">=3.11"
 name = "StratosMaestro"
 description = "StratosMaestro"
 authors = [
-    { name = 'Arnaud Somville', email = 'arnaud.somville@estaca.eu' },
-    {name = "Arnaud SOMVILLE", email = "arnaud.somville@estaca.eu"},
+    { name = 'Mehdi EL HILALI', email = 'mehdi.elhilali@estaca.eu' },
+    {name = "Mehdi EL HILALI", email = "mehdi.elhilali@estaca.eu"},
     {name = "", email = ""},
 ]
 version = "0.1.0"

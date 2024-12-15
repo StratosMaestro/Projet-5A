@@ -4,7 +4,7 @@ from unittest.mock import patch
 
 class TestPendu(unittest.TestCase):
 
-    def test_choisir_mot():
+    def test_choisir_mot(self):
         mot = choisir_mot()
         assert isinstance(mot, str)
         assert len(mot) > 0

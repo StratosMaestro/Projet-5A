@@ -18,6 +18,8 @@ class TestPendu(unittest.TestCase):
         # Mocking the input to test the jouer() method
         with patch('builtins.input', side_effect=['a', 'b', 'c', 'd', 'e', 'f', 'g']), patch('builtins.print') as mocked_print:
             jouer()  # Appelle la méthode jouer()
+
+            self.assertEqual(mocked_print.call_count, 8)
             
             # Test the final print messages to ensure correct game outcome
             expected_calls = [

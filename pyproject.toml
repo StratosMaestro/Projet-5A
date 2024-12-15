@@ -7,7 +7,7 @@ name = "jeu-du-pendu"
 version = "1.0.0"
 description = "Un jeu du pendu en Python, simple et éducatif."
 authors = [
-    { name = "StratosMaestro", email = "stratos@example.com" }
+    { name = "StratosMaestro", email = "mehdi.elhilali@estaca.eu" }
 ]
 license = { file = "LICENSE" }
 keywords = ["jeu", "pendu", "python", "jeu éducatif"]

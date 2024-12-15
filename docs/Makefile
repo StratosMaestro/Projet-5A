@@ -1,20 +1,23 @@
-# Minimal makefile for Sphinx documentation
-#
+# Makefile pour la documentation Sphinx
 
-# You can set these variables from the command line, and also
-# from the environment for the first two.
-SPHINXOPTS    ?=
-SPHINXBUILD   ?= sphinx-build
-SOURCEDIR     = .
-BUILDDIR      = _build
+# Configuration des variables
+SPHINX_PROJECT = "jeu-du-pendu"
+SPHINX_DOCS = "_build"
+SPHINX_SOURCE = "docs/source"
+SPHINX_OUTPUT = "docs"
 
-# Put it first so that "make" without argument is like "make help".
+# Génération de la documentation
+sphinx:
+	@echo "Génération de la documentation Sphinx..."
+	@cd docs && sphinx-build -b html source ${SPHINX_DOCS}
+
+# Nettoyer les fichiers temporaires et les fichiers de build
+clean:
+	@echo "Nettoyage des fichiers temporaires..."
+	@rm -rf ${SPHINX_DOCS}
+
+# Affichage de l'aide
 help:
-	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
-
-.PHONY: help Makefile
-
-# Catch-all target: route all unknown targets to Sphinx using the new
-# "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
-%: Makefile
-	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	@echo "Utilisez les cibles suivantes :"
+	@echo "  sphinx   : Génère la documentation Sphinx."
+	@echo "  clean    : Nettoie les fichiers temporaires et les fichiers de build."

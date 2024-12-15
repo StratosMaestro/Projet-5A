@@ -1,1 +1,2 @@
-#Aucune dépendance n'est neccessaire pour ce projet
+pytest
+pytest-cov

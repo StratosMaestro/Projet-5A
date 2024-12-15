@@ -12,15 +12,7 @@ class TestPendu(unittest.TestCase):
     def test_afficher_pendu(self):
         with patch('builtins.print') as mocked_print:
             afficher_pendu(0)
-            mocked_print.assert_called_once_with("""
-           ------
-           |    |
-           |
-           |
-           |
-           |
-       ---------
-            """)
+            mocked_print.assert_called_once_with("""\n           ------\n           |    |\n           |\n           |\n           |\n           |\n        ---------\n        """)
     
     def test_jouer(self):
         # Mocking the input to test the jouer() method

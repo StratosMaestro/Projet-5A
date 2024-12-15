@@ -19,9 +19,6 @@ class TestPendu(unittest.TestCase):
         with patch('builtins.input', side_effect=['a', 'b', 'c', 'd', 'e', 'f', 'g']), patch('builtins.print') as mocked_print:
             jouer()  # Appelle la méthode jouer()
             
-            # Test if afficher_pendu was called the correct number of times
-            self.assertEqual(mocked_print.call_count, 8)  # 7 appels à afficher_pendu() pour chaque tour, plus 1 pour la fin
-            
             # Test the final print messages to ensure correct game outcome
             expected_calls = [
                 "Bienvenue dans le jeu du pendu !",

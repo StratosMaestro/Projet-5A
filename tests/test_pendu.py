@@ -14,12 +14,12 @@ class TestPendu(unittest.TestCase):
             afficher_pendu(0)
             mocked_print.assert_called_once_with("""
             ------
-               |    |
-               |
-               |
-               |
-               |
-            ---------
+            |    |
+            |
+            |
+            |
+            |
+        ---------
             """)
     
     def test_jouer(self):

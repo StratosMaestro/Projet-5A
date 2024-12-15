@@ -20,7 +20,7 @@ readme = "README.md"
 requires-python = ">=3.8"
 
 [tool.setuptools]
-packages = ["jeu_du_pendu"]
+packages = ["pendu"]
 
 [tool.setuptools.package-data]
 jeu_du_pendu = ["*.txt"]
@@ -30,7 +30,7 @@ jeu-du-pendu = "main:jouer"
 
 [tool.pytest.ini_options]
 minversion = "6.0"
-addopts = "--cov=jeu_du_pendu --cov-report=term-missing"
+addopts = "--cov=pendu --cov-report=term-missing"
 testpaths = ["tests"]
 
 [project.optional-dependencies]

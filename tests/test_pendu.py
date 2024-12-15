@@ -13,13 +13,13 @@ class TestPendu(unittest.TestCase):
         with patch('builtins.print') as mocked_print:
             afficher_pendu(0)
             mocked_print.assert_called_once_with("""
-            ------
-            |    |
-            |
-            |
-            |
-            |
-        ---------
+           ------
+           |    |
+           |
+           |
+           |
+           |
+       ---------
             """)
     
     def test_jouer(self):

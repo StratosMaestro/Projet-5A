@@ -7,7 +7,7 @@ name = "jeu-du-pendu"
 version = "1.0.0"
 description = "Un jeu du pendu en Python, simple et éducatif."
 authors = [
-    { name = "StratosMaestro", email = "mehdi.elhilali@estaca.eu" }
+    { name = "Mehdi Hilali", email = "mehdi.elhilali@estaca.eu" }
 ]
 license = { file = "LICENSE" }
 keywords = ["jeu", "pendu", "python", "jeu éducatif"]
@@ -27,3 +27,14 @@ jeu_du_pendu = ["*.txt"]
 
 [tool.setuptools.scripts]
 jeu-du-pendu = "main:jouer"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "--cov=jeu_du_pendu --cov-report=term-missing"
+testpaths = ["tests"]
+
+[project.optional-dependencies]
+testing = [
+    "pytest>=6.0",
+    "pytest-cov>=2.12"
+]

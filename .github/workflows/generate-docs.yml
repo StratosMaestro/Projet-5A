@@ -28,7 +28,7 @@ jobs:
 
       - name: Run tests with coverage
         run: |
-          pytest --cov=pendu --cov-report=term-missing
+          pytest --cov --cov-report=term-missing
 
   docs:
     name: Build Documentation

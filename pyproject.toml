@@ -23,10 +23,10 @@ requires-python = ">=3.8"
 packages = ["pendu"]
 
 [tool.setuptools.package-data]
-jeu_du_pendu = ["*.txt"]
+pendu = ["*.txt"]
 
 [tool.setuptools.scripts]
-jeu-du-pendu = "main:jouer"
+pendu = "main"
 
 [tool.pytest.ini_options]
 minversion = "6.0"

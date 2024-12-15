@@ -28,6 +28,11 @@ pendu = ["*.txt"]
 [tool.setuptools.scripts]
 pendu = "main"
 
+[tool.coverage]
+exclude = [
+    "tests/*",
+]
+
 [tool.pytest.ini_options]
 minversion = "6.0"
 addopts = "--cov=pendu --cov-report=term-missing"

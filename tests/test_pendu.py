@@ -5,9 +5,9 @@ from unittest.mock import patch
 class TestPendu(unittest.TestCase):
 
     def test_choisir_mot():
-    mot = Pendu.choisir_mot()
-    assert isinstance(mot, str)
-    assert len(mot) > 0
+        mot = Pendu.choisir_mot()
+        assert isinstance(mot, str)
+        assert len(mot) > 0
     
     def test_afficher_pendu(self):
         with patch('builtins.print') as mocked_print:

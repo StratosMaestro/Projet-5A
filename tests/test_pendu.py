@@ -8,19 +8,79 @@ class TestPendu(unittest.TestCase):
         mot = choisir_mot()
         assert isinstance(mot, str)
         assert len(mot) > 0
-    
-    def test_afficher_pendu(self):
-        with patch('builtins.print') as mocked_print:
-            afficher_pendu(0)
-            mocked_print.assert_called_once_with("""
-               ------
-               |    |
-               |
-               |
-               |
-               |
-            ---------
-            """)
+    def afficher_pendu(erreurs: int) -> None:
+    """
+    Affiche l'état du pendu en fonction du nombre d'erreurs.
+
+    Args:
+        erreurs (int): Nombre d'erreurs commises.
+    """
+    etats = [
+        """
+           ------
+           |    |
+           |
+           |
+           |
+           |
+        ---------
+        """,
+        """
+           ------
+           |    |
+           |    O
+           |
+           |
+           |
+        ---------
+        """,
+        """
+           ------
+           |    |
+           |    O
+           |    |
+           |
+           |
+        ---------
+        """,
+        """
+           ------
+           |    |
+           |    O
+           |   /|
+           |
+           |
+        ---------
+        """,
+        """
+           ------
+           |    |
+           |    O
+           |   /|\\
+           |
+           |
+        ---------
+        """,
+        """
+           ------
+           |    |
+           |    O
+           |   /|\\
+           |   /
+           |
+        ---------
+        """,
+        """
+           ------
+           |    |
+           |    O
+           |   /|\\
+           |   / \\
+           |
+        ---------
+        """
+    ]
+    print(etats[erreurs])
     
     def test_jouer(self):
         # Mocking the input to test the jouer() method

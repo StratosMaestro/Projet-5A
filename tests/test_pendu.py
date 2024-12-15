@@ -8,6 +8,7 @@ class TestPendu(unittest.TestCase):
         mot = choisir_mot()
         assert isinstance(mot, str)
         assert len(mot) > 0
+        
     def afficher_pendu(erreurs: int) -> None:
     """
     Affiche l'état du pendu en fonction du nombre d'erreurs.
@@ -15,72 +16,72 @@ class TestPendu(unittest.TestCase):
     Args:
         erreurs (int): Nombre d'erreurs commises.
     """
-    etats = [
-        """
-           ------
-           |    |
-           |
-           |
-           |
-           |
-        ---------
-        """,
-        """
-           ------
-           |    |
-           |    O
-           |
-           |
-           |
-        ---------
-        """,
-        """
-           ------
-           |    |
-           |    O
-           |    |
-           |
-           |
-        ---------
-        """,
-        """
-           ------
-           |    |
-           |    O
-           |   /|
-           |
-           |
-        ---------
-        """,
-        """
-           ------
-           |    |
-           |    O
-           |   /|\\
-           |
-           |
-        ---------
-        """,
-        """
-           ------
-           |    |
-           |    O
-           |   /|\\
-           |   /
-           |
-        ---------
-        """,
-        """
-           ------
-           |    |
-           |    O
-           |   /|\\
-           |   / \\
-           |
-        ---------
-        """
-    ]
-    print(etats[erreurs])
+        etats = [
+            """
+               ------
+               |    |
+               |
+               |
+               |
+               |
+            ---------
+            """,
+            """
+               ------
+               |    |
+               |    O
+               |
+               |
+               |
+            ---------
+            """,
+            """
+               ------
+               |    |
+               |    O
+               |    |
+               |
+               |
+            ---------
+            """,
+            """
+               ------
+               |    |
+               |    O
+               |   /|
+               |
+               |
+            ---------
+            """,
+            """
+               ------
+               |    |
+               |    O
+               |   /|\\
+               |
+               |
+            ---------
+            """,
+            """
+               ------
+               |    |
+               |    O
+               |   /|\\
+               |   /
+               |
+            ---------
+            """,
+            """
+               ------
+               |    |
+               |    O
+               |   /|\\
+               |   / \\
+               |
+            ---------
+            """
+        ]
+        print(etats[erreurs])
     
     def test_jouer(self):
         # Mocking the input to test the jouer() method

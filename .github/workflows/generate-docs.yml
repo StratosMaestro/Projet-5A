@@ -28,7 +28,7 @@ jobs:
 
       - name: Run tests with coverage
         run: |
-          pytest --cov=jeu_du_pendu --cov-report=term-missing
+          pytest --cov=pendu --cov-report=term-missing
 
   docs:
     name: Build Documentation

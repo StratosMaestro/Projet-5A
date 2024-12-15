@@ -1,17 +1,17 @@
 import unittest
-from pendu import Pendu, c
+from pendu import choisir_mot, jouer, afficher_pendu
 from unittest.mock import patch
 
 class TestPendu(unittest.TestCase):
 
     def test_choisir_mot():
-        mot = Pendu.choisir_mot()
+        mot = choisir_mot()
         assert isinstance(mot, str)
         assert len(mot) > 0
     
     def test_afficher_pendu(self):
         with patch('builtins.print') as mocked_print:
-            Pendu.afficher_pendu(0)
+            afficher_pendu(0)
             mocked_print.assert_called_once_with("""
                ------
                |    |
@@ -25,7 +25,7 @@ class TestPendu(unittest.TestCase):
     def test_jouer(self):
         # Mocking the input to test the jouer() method
         with patch('builtins.input', side_effect=['a', 'b', 'c', 'd', 'e', 'f', 'g']), patch('builtins.print') as mocked_print:
-            Pendu().jouer()  # Appelle la méthode jouer()
+            jouer()  # Appelle la méthode jouer()
             
             # Test if afficher_pendu was called the correct number of times
             self.assertEqual(mocked_print.call_count, 8)  # 7 appels à afficher_pendu() pour chaque tour, plus 1 pour la fin
